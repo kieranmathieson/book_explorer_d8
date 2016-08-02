@@ -1,0 +1,33 @@
+
+book_explorer.list_books:
+  path: '/book-explorer/list-books'
+  defaults:
+    _controller: '\Drupal\book_explorer\Controller\ResearchController::listBooks'
+    _title: 'List of books'
+  requirements:
+    _permission: 'access content'
+
+book_explorer.book_structure:
+  path: '/book-explorer/book-structure/{bid}'
+  defaults:
+    _controller: '\Drupal\book_explorer\Controller\ResearchController::showBookStructure'
+    _title: 'Book structure'
+  requirements:
+    _permission: 'access content'
+
+book_explorer.book_rendered:
+  path: '/book-explorer/book-rendered/{bid}'
+  defaults:
+    _controller: '\Drupal\book_explorer\Controller\ResearchController::showBookRendered'
+    _title: 'Book rendered'
+  requirements:
+    _permission: 'access content'
+
+book_explorer.inspect_menu:
+  path: '/book-explorer/inspect-menu'
+  defaults:
+    _controller: '\Drupal\book_explorer\Controller\ResearchController::inspectMenu'
+    _title: 'Inspect menu'
+  requirements:
+    _permission: 'access content'
+

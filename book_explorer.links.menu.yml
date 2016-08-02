@@ -1,0 +1,2 @@
+book_explorer_node_pages_links:
+  deriver: \Drupal\book_menus\Plugin\Derivative\BookExplorerMenuLinkDerivative

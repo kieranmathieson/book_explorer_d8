@@ -1,0 +1,8 @@
+name: Book Explorer
+type: module
+description: 'Collapsible Explorer-like book menu.'
+package: Other
+version: '8.x-1.0-dev'
+core: '8.x'
+dependencies:
+  - book
