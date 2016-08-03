@@ -80,6 +80,13 @@ class BookExplorerBlock extends BlockBase implements ContainerFactoryPluginInter
     //Load and render the book tree.
     $structure = $this->bookManager->bookTreeAllData($bid);
     $output = $this->bookManager->bookTreeOutput($structure);
+    $output['#attached'] = [
+      'library' =>  [
+        'book_explorer/menu-tree'
+      ],
+    ];
+    drupal_set_message('Output array:');
+    ksm($output);
     return [
       $output
     ];
