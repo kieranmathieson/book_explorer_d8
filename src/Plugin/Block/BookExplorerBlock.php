@@ -85,8 +85,6 @@ class BookExplorerBlock extends BlockBase implements ContainerFactoryPluginInter
         'book_explorer/menu-tree'
       ],
     ];
-    drupal_set_message('Output array:');
-    ksm($output);
     return [
       $output
     ];
