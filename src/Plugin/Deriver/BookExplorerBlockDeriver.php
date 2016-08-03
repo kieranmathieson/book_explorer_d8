@@ -46,6 +46,8 @@ class BookExplorerBlockDeriver extends DeriverBase implements ContainerDeriverIn
     foreach ($books as $book) {
       $block_id = 'book_explorer_' . $book['bid'];
       $book_node = $this->entTypeManager->getStorage('node')->load($book['bid']);
+//      drupal_set_message('Ders');
+//      ksm($this->derivatives);
       $this->derivatives[$block_id] = $base_plugin_definition;
       $this->derivatives[$block_id]['admin_label'] = t('Book: @title', ['@title' => $book['title']]);
       $this->derivatives[$block_id]['config_dependencies']['config'] = array($book_node->getConfigDependencyName());

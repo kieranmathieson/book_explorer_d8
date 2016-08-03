@@ -80,11 +80,18 @@ class BookExplorerBlock extends BlockBase implements ContainerFactoryPluginInter
     //Load and render the book tree.
     $structure = $this->bookManager->bookTreeAllData($bid);
     $output = $this->bookManager->bookTreeOutput($structure);
+    //Strip off top level. It's just the book node.
+    $top_level = array_shift($output['#items']);
+    $output['#items'] = $top_level['below'];
+
+    //No link to top-level book page.
+    //$output['#items'] = $output['#items']['below'];
     $output['#attached'] = [
       'library' =>  [
         'book_explorer/menu-tree'
       ],
     ];
+//    ksm($output);
     return [
       $output
     ];
